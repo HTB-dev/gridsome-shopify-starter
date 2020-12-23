@@ -28,8 +28,10 @@
               <g-link v-else to="/collections" class="text-copy-primary hover:text-gray-600">Collections</g-link>
             </li>
             <li>
-              <a v-if="$route.path === '/'" href="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">About</a>
-              <g-link v-else to="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">About</g-link>
+              <g-link class="nav__link" to="/about/">About</g-link>
+            </li>
+            <li>
+              <g-link class="nav__link" to="/blog/">Blog</g-link>
             </li>
             <li>
               <a v-if="$route.path === '/'" href="https://gridsomify.com" class="text-copy-primary hover:text-gray-600">Contact</a>

@@ -17,6 +17,13 @@ module.exports = {
     'gridsome-plugin-robots',
     'gridsome-plugin-tailwindcss',
     {
+      use: '@gridsome/source-wordpress',
+      options: {
+        baseUrl: 'https://77603738d6947809f7359dca454abd51ec1b8057.hl-a.getshifter.co',
+        typeName: 'WordPress', // GraphQL schema name (Optional)
+      }
+    },
+    {
       use: 'gridsome-plugin-pwa',
       options: {
           title: 'Gridsome Shopify Starter',
@@ -57,8 +64,8 @@ module.exports = {
     {
       use: 'gridsome-source-shopify',
       options: {
-        storeName: process.env.GRIDSOME_SHOPIFY_STOREFRONT,
-        storefrontToken: process.env.GRIDSOME_SHOPIFY_STOREFRONT_TOKEN
+        storeName: 'sac2020',
+        storefrontToken: '8f3df1caacdb54c897b10fec7bbd9f32'
       }
     },
     {
@@ -100,6 +107,17 @@ module.exports = {
       {
         path: '/collection/:handle',
         component: './src/templates/Collection.vue'
+      }
+    ],
+    WordPressCategory: '/category/:slug', // adds route for "category" post type (Optional)
+    WordPressPost: '/:year/:month/:day/:id', //adds route for "post" post type (Optional)
+    WordPressPostTag: '/tag/:slug', // adds route for "post_tag" post type (Optional)
+    WordPressPage: [
+      {
+        path: (node) => {
+          const url = new URL(node.link);
+          return `${url.pathname}`
+        }
       }
     ]
   },

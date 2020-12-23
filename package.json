@@ -25,6 +25,7 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@gridsome/source-wordpress": "^0.4.0",
     "gridsome-plugin-tailwindcss": "^2.2.48"
   }
 }
