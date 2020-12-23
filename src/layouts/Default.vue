@@ -6,7 +6,7 @@
       aria-label="main navigation">
 
         <div class="mx-auto">
-          <g-link to="https://gridsomify.com" alt="Gridsome Shopify"><div class="font-serif text-4xl font-bold text-center">Gridsome Shopify</div></g-link>        
+          <g-link to="/" alt="Gridsome Shopify"><div class="font-serif text-4xl font-bold text-center">Gridsome Shopify</div></g-link>        
         </div>
 
         <div class="block lg:hidden">
@@ -26,6 +26,9 @@
             <li>
               <a v-if="$route.path === '/'" href="/collections" class="text-copy-primary hover:text-gray-600">Collections</a>
               <g-link v-else to="/collections" class="text-copy-primary hover:text-gray-600">Collections</g-link>
+            </li>
+            <li>
+              <g-link class="nav__link" to="/">Home</g-link>
             </li>
             <li>
               <g-link class="nav__link" to="/about/">About</g-link>
